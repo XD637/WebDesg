@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+{% block title %} Your Feed {%endblock%}
+{% block content %}
+<html>
+    <head>
+        <link rel=  "stylesheet"  type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    </head>
+</html>
+
+{% for x in post %}
+<style>
+   .container1{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+        font-size:x-small;
+        font-weight:italic;
+        font-style:inherit;
+        padding-top: 2%;
+         }
+</style>
+
+<style>
+  .container2{
+       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+       font-size: 10px;
+       font-style: inherit;
+       text-transform: uppercase;
+       padding-top: 2%;
+   }
+</style>
+<style>
+  .container3{
+       font-family: 'Times New Roman', Times, serif;
+       font-size: x-small;
+       font-style: inherit;
+   }
+</style>
+<style>
+  .container4{
+       font-family: 'Times New Roman', Times, serif;
+       font-size: xx-small ;
+       font-style: oblique;
+       padding-bottom: 1%;
+  }
+</style>
+<style>
+  .container2,.container3,.container4{
+    text-wrap:pretty ;
+    background-color:aliceblue ;
+    border-radius: 1px;
+    background-size: 100px 50px;
+  }
+</style>
+
+  <div class = "container1"; style= "margin-left: -100px"; position : relative; >
+    <span>@{{ x.author }}</span>
+  </div>
+  <div class = "container2"; position : relative;>
+    <span>{{ x.title }}:</span>
+  </div>
+  <div class = "container3"; position : relative;>
+    {{ x.description }}
+  </div>
+  <div class = "container4"; position : relative;>
+    <span>-{{ x.created_at}}</span>
+  </div>
+{% endfor %}
+{% endblock%}

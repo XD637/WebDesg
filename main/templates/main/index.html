@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+{% block title %} Home {%endblock%}
+{% block content %}
+<html>
+    <head>
+        <link rel=  "stylesheet"  type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    </head>
+</html>
+<style>
+    .headings{
+        margin-left: -100px;
+        padding-top: 2%;
+    }
+</style>
+<div class="headings">
+<h1>About Me</h1>
+</div>
+<div class = "animate">
+    <p>
+    <br>Welcome to Apostly, the anonymous platform where your thoughts find a voice without the need for recognition. Have something to say but prefer to keep it discreet? You've come to the right place.<br>
+    <br>Express yourself freely, unburdened by identity or judgment.<br>
+    <br>Share snippets of your mind, musings, confessions, or simply let your creativity flow in this digital sanctuary. Whether it is a fleeting idea, a profound reflection, or a quirky observation, every contribution adds to the tapestry of anonymous expression.<br>
+    <br>Dive into a world where anonymity empowers authenticity. No profiles, just pure unfiltered expression.<br>
+    <br>Embrace the freedom to speak your mind without fear or inhibition.<br>
+    <br>Discover the beauty of anonymity at Apostly. Your voice matters, regardless of who you are. Start sharing your anonymous snippets today and become part of a movement where voices, not identities, take center stage.<br>
+    <br>Join a community where the focus is solely on the words you share, not who you are.<br>
+</p> 
+</div>
+{% if user.is_authenticated %}
+<div class="btn1">
+    <a href="/post">
+    <button type="submit" class="btn btn-primary">Post</button></a>
+</div>
+<style>
+    .btn1{
+        cursor: pointer;
+        margin-left: -3px;
+    }
+</style>
+{% else %}
+<div class="btn2">
+    <a href="/register">
+    <button type="submit" class="btn btn-primary">Join Now</button></a>
+</div>
+<style>
+    .btn2{
+        cursor: pointer;
+        margin-left: -3px;
+    }
+</style>
+{% endif %}
+{% endblock%}
