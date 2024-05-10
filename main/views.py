@@ -12,15 +12,18 @@ posts = [{"title": Post.title , "description": Post.description}]
 # Create your views here.
 def home(response):
     return render(response,"main/index.html")
+
 def logout_request(response):
     logout(response)
     return redirect("/home")
+
 @login_required(login_url="/login")
 def feed(request):
     id = request.user.id
     posts = Post.objects.all().order_by("-created_at")
     context = {'post': posts}
     return render(request,"main/feed.html", context)
+
 @login_required(login_url="/login")
 def create_post(requests):
     if requests.method == "POST":
@@ -33,5 +36,12 @@ def create_post(requests):
     else:
         form = PostForm()
         return render(requests, "main/create_post.html", {"form":form})
+
+def donate(response):
+    return render(response,"main/donate.html")
+    
+def paypal(response):
+    return render(response,"main/paypal.html")
+
 
 
