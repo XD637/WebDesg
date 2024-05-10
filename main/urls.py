@@ -7,4 +7,6 @@ urlpatterns = [
     path('feed/', views.feed, name = "feed"),
     path('post/', views.create_post, name = "create_post"),
     path("logout/", views.logout_request, name="logout"),
+    path('donate/', views.donate, name = "donate"),
+    path('paypal/', views.paypal, name = "paypal"),
 ]
