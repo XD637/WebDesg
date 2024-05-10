@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% block title %}Pay with Paypal{% endblock %}
+{% block content %}
+
+<html>
+  <link rel=  "stylesheet"  type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+  </html>
+<div id="paypal-button-container"></div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=AWVSHDOValfac0zF93Uiz034FyR2GiGYZMzcqbm3b9KdzIIfEGpbY29MPOCJV34vsIBdjbDJq1aRgykm"></script>
+
+<script>
+  paypal.Buttons().render('#paypal-button-container');
+</script>
+
+<style>
+  #paypal-button-container {
+    padding-top: 240px;
+    padding-left: 240px;
+  }
+</style>
+{% endblock %}

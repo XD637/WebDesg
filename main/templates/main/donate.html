@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+{% block title %} Donate Us {%endblock%}
+{% block content %}
+<html>
+    <head>
+        <link rel=  "stylesheet"  type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    </head>
+</html>
+<style>
+    .donate{
+        margin-left: -100px;
+        padding-top: 2%;
+    }
+</style>
+
+
+<div class="donate">
+    <h1>Donate Us</h1>
+</div>
+<div>
+    <p>
+    <br>Join us in advancing knowledge and making a difference by donating to our website.<br>
+    <br>As Albert Einstein famously said, 'The value of a man resides in what he gives and not in what he is capable of receiving'.<br>
+    <br>Your support fuels our efforts to innovate, educate, and inspire change.<br>
+    <br>Together, let's harness the power of generosity to create a brighter future for all.<br>
+    <br>Every contribution, no matter the size, brings us closer to our shared vision of progress and prosperity.<br>
+    <br>Join our cause today and be a part of something truly remarkable.<br>
+</p>
+</div>
+<div class="btn">
+    <a href="/paypal">
+    <button type="submit" class="btn btn-primary">Donate</button></a>
+</div>
+<style>
+    .btn{
+        cursor: pointer;
+        margin-left: -12px;
+    }
+</style>
+{%endblock%}
